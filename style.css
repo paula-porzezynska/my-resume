@@ -1,0 +1,252 @@
+/* czcionki: 'Ubuntu' 400, 500, 700, 'Raleway' 300, 400, 500, 'Hind Vadodara' 300, 400, 500 
+7.594rem  121.5px
+5.063rem  81px
+3.375rem  54px
+2.25rem   36px
+1.5rem    24px
+1rem      16px */
+
+:root {
+  font-size: 16px;
+  --dgray: #5C6F73;
+  --mgray: #849396;
+  --lgray: #e3e4e4;
+  --orange: #F28322;
+  --yellow: #F2B544;
+  --white: #f9fcfd;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+  font-family: 'Hind Vadodar', sans-serif;
+}
+
+
+/* navbar */
+#s-nav {
+  background-color:  var(--mgray);
+  padding: 1vh 1.5rem;
+  max-height: 10vh;
+}
+.s-nav_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.s-nav_name {
+  font-size: 1rem;
+  font-family: 'Hind Vadodara', sans-serif;
+  color: var(--white);
+}
+
+
+/* navbar -- hamburger */
+.s-menu {
+  z-index: 100;
+  margin: auto 0;
+  width: 2rem;
+  display: block;
+  height: 1.5rem;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.s-menu span {
+  display: block;
+  position: absolute;
+  height: 1.5px;
+  width: 100%;
+  background: var(--white);
+  border-radius: 5px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+.s-menu span:nth-child(1) {
+  top: 0px;
+}
+.s-menu span:nth-child(2), .s-menu span:nth-child(3) {
+  top: 8px;
+}
+.s-menu span:nth-child(4) {
+  top: 16px;
+}
+
+/* header */
+#s-header {
+  height: 90vh;
+  width: 85vw;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.s-header_pic {
+  margin: 0 auto 2vh auto;
+  background-image: url(./img/construction.svg);
+  background-repeat: no-repeat;
+  height: 70%;
+  max-height: 75vh;
+  max-width: 100%; 
+  background-size: contain;
+  background-position: center;
+}
+
+.s-header_pic img {
+  max-height: 70vh;
+  margin: 2vh auto 0 auto;
+}
+
+.s-header_text {
+  box-sizing: border-box;
+  max-width: 550px;
+  max-height: 25vh;
+  font-size: 2.25rem;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0 auto; 
+}
+
+.s-header_info {
+  margin: 0 auto;
+}
+
+.accent {
+  font-weight: 700;
+  color: var(--yellow);
+  letter-spacing: 2px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.s-header_info + .accent {
+  font-size: 3.375rem;
+  margin-top: 2vw;
+  margin-bottom: 2vh;
+  text-align: right;  
+  text-shadow: 5px 5px 3px var(--lgray);
+}
+
+/* portfolio */
+#s-portfolio {
+  background-color: #ddd
+}
+.s-portfolio_aboutme {
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+/* tech stack */
+
+#s-tech {
+  background-color: var(--white);
+  padding: 4vh 7.5vw;
+  border-top: 4px dashed #F2B544;
+  height: 85vh;
+}
+
+.s-tech_content {
+  font-size: 1rem;
+}
+
+.s-tech_content .accent {
+  font-size: 2.25rem;
+  text-shadow: 5px 5px 3px var(--lgray);
+  letter-spacing: 1px;
+  margin: 3vw auto;
+}
+
+.s-tech_text {
+  line-height: 1.5rem;
+  margin: auto 3vw;
+}
+
+.s-tech_wall {
+  display: grid;
+  grid-gap: 1.5vw;
+  padding: 3vh 0;
+  grid-template-columns: 12vw 12vw 12vw 12vw 12vw 12vw;
+  grid-template-areas: 
+  '.     .     GIT    GIT    .     .'
+  '.     SASS  SASS   REACT  REACT REACT'
+  'BS    BS    BS     BS     AJAX  AJAX'
+  'UX    JQ    JQ     REST   REST  REST '
+  'HTML  HTML  CSS    CSS    JS    JS';
+  align-content: stretch;
+  margin: 0 auto;
+}
+
+.s-tech_brick {
+  box-sizing: content-box;
+  background-color: var(--mgray);
+  border-radius: 5px;
+}
+
+.s-tech_btext {
+  margin: 0.3rem;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  /* min-height: 3rem; */
+  color: var(--white);
+  font-weight: 500;
+  border-left:rgba(227,228,228, 0.5) solid 2.5px;
+  border-top: rgba(227,228,228, 0.5) solid 2.5px;
+  border-radius: 4px;
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+.s-tech_brick:nth-child(1),
+.s-tech_brick:nth-child(6),
+.s-tech_brick:nth-child(7),
+.s-tech_brick:nth-child(8) {
+  background-color: var(--dgray);
+}
+
+.s-tech_brick:nth-child(3),
+.s-tech_brick:nth-child(4), 
+.s-tech_brick:nth-child(5) {
+  background-color: var(--yellow);
+}
+.s-tech_brick:nth-child(3) .s-tech_btext,
+.s-tech_brick:nth-child(4) .s-tech_btext, 
+.s-tech_brick:nth-child(5) .s-tech_btext {
+  border-top: rgba(235,216,182, 0.6) solid 2.5px;
+  border-left: rgba(235,216,182, 0.6) solid 2.5px;
+}
+
+
+
+.s-tech_brick:nth-child(1) {
+  grid-area: HTML;
+}
+.s-tech_brick:nth-child(2) {
+  grid-area: CSS;
+}
+.s-tech_brick:nth-child(3) {
+  grid-area: JS;
+}
+.s-tech_brick:nth-child(4) {
+  grid-area: GIT;
+}
+.s-tech_brick:nth-child(5) {
+  grid-area: UX;
+}
+.s-tech_brick:nth-child(6) {
+  grid-area: SASS;
+}
+.s-tech_brick:nth-child(7) {
+  grid-area: AJAX;
+}
+.s-tech_brick:nth-child(8) {
+  grid-area: JQ;
+}
+.s-tech_brick:nth-child(9) {
+  grid-area: REST;
+}
+.s-tech_brick:nth-child(10) {
+  grid-area: BS;
+}
+.s-tech_brick:nth-child(11) {
+  grid-area: REACT;
+}
